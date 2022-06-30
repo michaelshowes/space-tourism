@@ -1,3 +1,79 @@
-.header {
+@use '../../scss/global/colors' as *;
+@use '../../scss/global/typography' as type;
 
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 24px;
+
+  .logo {
+    width: 40px;
+  }
+
+  .menu {
+    width: 24px;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    // display: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 254px;
+    height: 100vh;
+    padding: 34px 26px;
+    background-color: rgba(255, 255, 255, .04);
+    backdrop-filter: blur(81.55px);
+    z-index: 1;
+
+    .close {
+      width: 19px;
+      align-self: flex-end;
+      cursor: pointer;
+    }
+
+    .nav-text {
+      font: type.$nav-links;
+
+      li {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        a {
+          position: relative;
+          display: block;
+          width: 100%;
+          padding: 6px 32px;
+          margin: 10px 0;
+
+          &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: '';
+            background-color: primary-color(white);
+            width: 0;
+            height: 0;
+            transition: height .2s ease-in-out;
+          }
+
+          &:hover {
+            color: color(violet);
+
+            &::after {
+              width: 4px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server .",
+    "dev": "webpack-dev-server .",
     "build": "webpack .",
     "clean": "rm -rf public"
   },

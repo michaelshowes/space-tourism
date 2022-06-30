@@ -4,6 +4,12 @@ $colors: (
   ),
   black: (
     1: #000
+  ),
+  dark-blue: (
+    1: #0b0d17
+  ),
+  violet: (
+    1: #d0d6f9
   )
 );
 
@@ -42,6 +48,6 @@ $socialmediacolors: (
 }
 
 // global color variables
-$body-color: color(black);
+$body-color: color(white);
 
-$body-bg-color: color(white);
+$body-bg-color: color(dark-blue);
